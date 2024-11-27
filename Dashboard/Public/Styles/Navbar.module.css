@@ -1,0 +1,185 @@
+/* Base Navbar Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color: #111;
+    border-bottom: 2px solid #777;
+    position: relative;
+    /* flex-wrap: wrap; */
+}
+
+/* Logo Styling */
+img {
+    height: 50px;
+    filter: invert(1);
+}
+
+/* Home Button */
+#home-btn {
+    height: 40px;
+    width: 40px;
+    border-bottom: 3px solid #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: auto; /* Position the home button on the right */
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px; /* Space between input and search icon */
+    margin-top: 10px;
+}
+
+/* Input Field */
+input {
+    height: 50px;
+    width: 100%;
+    max-width: 550px; /* Set max-width to limit stretching */
+    border-radius: 25px;
+    border: none;
+    padding: 0 15px;
+    padding-right: 50px; /* Add padding on the right to accommodate the button */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Search Button inside Input */
+#btn {
+    position: absolute;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    right: 5px; /* Align button to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #333; /* Button background */
+}
+
+/* Auth Buttons Container */
+.Auth-Container {
+    display: flex;
+    gap: 1rem;
+    /* margin-top: 20px; */
+}
+
+/* Auth Buttons */
+#sign-in {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#login {
+    color: #333;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+/* Media Queries for Different Screen Sizes */
+
+/* For Large Screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+    nav {
+        padding: 10px 40px;
+        justify-content: flex-start;
+    }
+
+    .input-wrapper {
+        width: 60%;
+    }
+
+    input {
+        width: 100%; /* Full width input for large screens */
+    }
+
+    .Auth-Container {
+        gap: 2rem;
+    }
+}
+
+/* For Tablets (Between 768px and 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    .input-wrapper {
+        width: 80%;
+    }
+
+    input {
+        width: 100%; /* Full width input on tablets */
+    }
+
+    .Auth-Container {
+        gap: 1.5rem;
+    }
+}
+
+/* For Small Screens (Below 768px) */
+@media screen and (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        height: auto;
+        align-items: center;
+    }
+
+    img {
+        height: 40px; /* Smaller logo */
+        margin-right: 0;
+    }
+
+    .input-wrapper {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%; /* Full width input */
+        height: 45px;
+    }
+
+    #btn {
+        right: 5px; /* Adjust button position */
+        height: 40px;
+        width: 40px;
+    }
+
+    .Auth-Container {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sign-in,
+    #login {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #home-btn {
+        position: absolute;
+        left:-20px;
+        border-radius: 50%;
+        border: none;
+        bottom: 60px;
+    }
+}
