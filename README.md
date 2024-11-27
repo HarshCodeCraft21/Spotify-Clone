@@ -39,6 +39,5 @@ Additionally, it integrates **authentication**, allowing users to log in securel
 
     cd spotify-clone
     npm install 
-
-3.Run the app:
+    
     npm run dev
