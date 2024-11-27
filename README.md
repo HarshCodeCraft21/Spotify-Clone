@@ -35,12 +35,10 @@ Additionally, it integrates **authentication**, allowing users to log in securel
    ```bash
    git clone https://github.com/HarshCodeCraft21/Spotify-Clone.git
 
-2.Install dependencies:
+2.Install dependencies: 
 
-    ```bash
     cd spotify-clone
     npm install 
 
 3.Run the app:
-    ```bash
     npm run dev
